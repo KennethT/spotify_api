@@ -1,0 +1,8 @@
+<h1>Album Covers from Spotify API </h1>
+
+
+<% @sf2.each do |album| %>
+<% album.drop(1).each_slice(3) do |img, _| %>
+<%= image_tag img["url"]   %>
+<% end %>
+<% end %>
